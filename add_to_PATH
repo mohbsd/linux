@@ -1,0 +1,43 @@
+~ UNIX / Linux: Set your PATH Variable Using set or export Command ~
+
+- Finding out your current path
+# echo "$PATH"
+ex output : /home/mob/bin:/home/mob/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# export PATH=$PATH:/path/to/dir1
+# export PATH=$PATH:/path/to/dir1:/path/to/dir2
+
+or 
+
+# PATH=$PATH:/path/to/dir1; export PATH
+
+
+ - To make these changes permanent, add the commands described above to the end of your ~/.profile file for sh and ksh shell, or ~/.bash_profile file for bash shell:
+
+# echo 'export PATH=$PATH:/usr/local/bin'  >> ~/.bash_profile
+
+
+------------------------------------------------------------
+
+
+
+exemple : add   /usr/pgsql-10/bin to the path permanently
+# echo 'export PATH=$PATH:/usr/pgsql-10/bin' >> ~/.bash_profile
+
+or 
+
+# echo 'export PATH=$PATH:/usr/local/bin'  >> ~/.bash_profile
+
+
+------------------------------------------------------------
+
+exemple : add   /usr/pgsql-10/bin to the path temporary
+# export PATH=$PATH:/usr/pgsql-10/bin
+
+or
+
+export PATH=$PATH:/usr/local/bin
+
+or
+
+PATH=$PATH:/usr/local/bin; export PATH
